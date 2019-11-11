@@ -1,7 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="" />
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Added patient Table">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/dao/PatientDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/PatientView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/PatientEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/create.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/DoctorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/StatisticsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/DoctorStatistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/edit/DoctorEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/DoctorEdit.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,15 +57,23 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="lovk4ch" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TMEHeYBNP2q34lc16AiTCgwYlB" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="JPA.DatabaseSchemaImportDialog" value="deedc1d8-199c-4e74-a625-759265f30cfa" />
@@ -70,6 +91,9 @@
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.haulmont.web.view.edit" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="com.haulmont.web.model.entity" />
     </key>
@@ -174,7 +198,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -185,6 +211,7 @@
       <path value="$PROJECT_DIR$/src" />
     </ignored-roots>
     <MESSAGE value="Init" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init" />
+    <MESSAGE value="Added patient Table" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added patient Table" />
   </component>
 </project>

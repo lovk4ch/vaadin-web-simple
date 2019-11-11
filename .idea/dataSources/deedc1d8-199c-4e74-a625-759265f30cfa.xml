@@ -40,7 +40,7 @@
       <DataType>VARCHAR(30)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="14" parent="6" name="SYS_IDX_DOCTOR_PK_10149">
+    <index id="14" parent="6" name="SYS_IDX_DOCTOR_PK_10095">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
@@ -72,8 +72,9 @@
     <column id="20" parent="7" name="PHONE_NUMBER">
       <Position>5</Position>
       <DataType>VARCHAR(15)|12s</DataType>
+      <NotNull>1</NotNull>
     </column>
-    <index id="21" parent="7" name="SYS_IDX_PATIENT_PK_10155">
+    <index id="21" parent="7" name="SYS_IDX_PATIENT_PK_10103">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
@@ -116,20 +117,20 @@
       <DataType>VARCHAR(6)|12s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <index id="30" parent="8" name="SYS_IDX_SYS_PK_10158_10163">
+    <index id="30" parent="8" name="SYS_IDX_SYS_PK_10108_10113">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="31" parent="8" name="SYS_IDX_PATIENT_10165">
+    <index id="31" parent="8" name="SYS_IDX_PATIENT_10119">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>PATIENT</ColNames>
     </index>
-    <index id="32" parent="8" name="SYS_IDX_DOCTOR_10167">
+    <index id="32" parent="8" name="SYS_IDX_DOCTOR_10121">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>DOCTOR</ColNames>
     </index>
-    <key id="33" parent="8" name="SYS_PK_10158">
+    <key id="33" parent="8" name="SYS_PK_10108">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>

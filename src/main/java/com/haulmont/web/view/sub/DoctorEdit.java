@@ -1,4 +1,4 @@
-package com.haulmont.web.view.edit;
+package com.haulmont.web.view.sub;
 
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.entity.Doctor;
@@ -7,7 +7,7 @@ import com.haulmont.web.view.DoctorView;
 import com.vaadin.data.Binder;
 import com.vaadin.ui.*;
 
-public class DoctorEdit {
+public class DoctorEdit extends Window {
     private TextField firstName = new TextField("First Name");
     private TextField lastName = new TextField("Last Name");
     private TextField middleName = new TextField("Middle Name");
@@ -16,13 +16,11 @@ public class DoctorEdit {
     private Service service = Service.getInstance();
     private Binder<Doctor> binder = new Binder<>(Doctor.class);
 
-    private Window window;
+    private DoctorView mainView;
+
     private Button okButton, cancelButton;
 
-    private final DoctorView mainView;
-
     public DoctorEdit(DoctorView mainView) {
-
         firstName.setMaxLength(30);
         lastName.setMaxLength(30);
         middleName.setMaxLength(30);
@@ -47,13 +45,13 @@ public class DoctorEdit {
         this.mainView = mainView;
     }
 
-    private void show(Doctor doctor, String header) {
+    private void update(Doctor doctor, String header) {
         okButton = new Button(Consts.OK,
             clickEvent -> {
                 if (binder.validate().isOk()) {
                     service.saveDoctor(doctor);
                     mainView.updateList();
-                    window.close();
+                    close();
                     binder.setBean(null);
                 } else {
                     Notification.show(binder.validate()
@@ -63,7 +61,7 @@ public class DoctorEdit {
         cancelButton = new Button(Consts.CANCEL,
             clickEvent -> {
                 mainView.updateList();
-                window.close();
+                close();
                 binder.setBean(null);
             });
         HorizontalLayout buttons = new HorizontalLayout();
@@ -74,20 +72,17 @@ public class DoctorEdit {
         VerticalLayout layout = new VerticalLayout();
         layout.addComponents(firstName, lastName, middleName, specialization, buttons);
 
-        window = new Window(header);
-        window.setContent(layout);
-        window.setModal(true);
-        window.center();
-        mainView.addWindow(window);
+        setContent(layout);
+        setModal(true);
+        center();
+        mainView.getUI().addWindow(this);
     }
 
-    public void add() {
-        Doctor doctor = new Doctor();
-        show(doctor, Consts.ADD);
+    public void add(Doctor doctor) {
+        update(doctor, Consts.ADD);
     }
 
-    public void edit() {
-        Doctor doctor = mainView.grid.asSingleSelect().getValue();
-        show(doctor, Consts.UPDATE);
+    public void edit(Doctor doctor) {
+        update(doctor, Consts.UPDATE);
     }
 }

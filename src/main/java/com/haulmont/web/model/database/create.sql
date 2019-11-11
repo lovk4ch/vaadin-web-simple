@@ -19,7 +19,7 @@ create table PATIENT
     FIRST_NAME   VARCHAR(30) not null,
     LAST_NAME    VARCHAR(30) not null,
     MIDDLE_NAME  VARCHAR(30),
-    PHONE_NUMBER VARCHAR(15)
+    PHONE_NUMBER VARCHAR(15) not null
 );
 
 create table RECIPE

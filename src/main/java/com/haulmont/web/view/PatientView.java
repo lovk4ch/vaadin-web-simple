@@ -1,32 +1,31 @@
 package com.haulmont.web.view;
 
 import com.haulmont.web.controller.Service;
-import com.haulmont.web.model.entity.Doctor;
-import com.haulmont.web.view.sub.DoctorEdit;
-import com.haulmont.web.view.sub.DoctorStatistics;
+import com.haulmont.web.model.entity.Patient;
+import com.haulmont.web.view.sub.PatientEdit;
 import com.vaadin.ui.*;
 
-public class DoctorView extends VerticalLayout {
+public class PatientView extends VerticalLayout {
 
-    private DoctorEdit doctorEdit = new DoctorEdit(this);
+    private PatientEdit patientEdit = new PatientEdit(this);
 
     private Service service = Service.getInstance();
-    private Button addButton, updateButton, deleteButton, showStatButton;
+    private Button addButton, updateButton, deleteButton;
 
-    private Grid<Doctor> grid = new Grid<>(Doctor.class);
+    private Grid<Patient> grid = new Grid<>(Patient.class);
 
-    DoctorView() {
-        grid.setColumns("firstName", "lastName", "middleName", "specialization");
+    PatientView() {
+        grid.setColumns("firstName", "lastName", "middleName", "phoneNumber");
         grid.setSizeFull();
         addComponents(grid);
 
         addButton = new Button(Consts.ADD,
-            event -> doctorEdit.add(new Doctor()));
+            event -> patientEdit.add(new Patient()));
 
         updateButton = new Button(Consts.UPDATE,
             event -> {
                 if (grid.asSingleSelect().getValue() != null) {
-                    doctorEdit.edit(grid.asSingleSelect().getValue());
+                    patientEdit.edit(grid.asSingleSelect().getValue());
                 }
                 else {
                     Notification.show(Consts.SELECT_WARNING);
@@ -44,10 +43,7 @@ public class DoctorView extends VerticalLayout {
                 }
             });
 
-        showStatButton = new Button(Consts.SHOW_STATS,
-            event -> new DoctorStatistics(this));
-
-        HorizontalLayout options = new HorizontalLayout(addButton, updateButton, deleteButton, showStatButton);
+        HorizontalLayout options = new HorizontalLayout(addButton, updateButton, deleteButton);
 
         addComponents(options);
         setSizeFull();
@@ -56,6 +52,6 @@ public class DoctorView extends VerticalLayout {
     }
 
     public void updateList() {
-        grid.setItems(service.findAllDoctors());
+        grid.setItems(service.findAllPatients());
     }
 }
