@@ -7,10 +7,13 @@ import java.util.Objects;
 
 public class Consts {
 
+    public static final String DOCTOR_DELETE_ERROR = "This doctor can't be deleted because he has prescribed a recipe for one or more patients.";
+    public static final String PATIENT_DELETE_ERROR = "This patient can't be deleted because one or more recipes have been registered for him.";
+
+    public static final String PHONE_WARNING = "Phone number must have format 123-456-7890";
     public static final String FILL_WARNING = "Please complete all the required fields";
+
     public static final String SELECT_WARNING = "Please select an entry in the table";
-    public static final String DOCTOR_DELETE_ERROR = "This doctor cannot be removed because he is writing a prescription for one or more patients.";
-    public static final String PATIENT_DELETE_ERROR = "This patient cannot be deleted because one or more recipes have been registered for him.";
 
     public static final String ADD = "Добавить";
     public static final String UPDATE = "Изменить";
@@ -23,6 +26,7 @@ public class Consts {
 
     public static Validator<LocalDate> dateValidator = Validator.from(Objects::nonNull, FILL_WARNING);
     public static Validator<String> emptyValidator = Validator.from(str -> str.length() > 0, FILL_WARNING);
+    public static Validator<String> phoneValidator = Validator.from(str -> str.matches("(?:\\d{3}-){2}\\d{4}"), PHONE_WARNING);
 
     /*public static Validator<String> lengthValidatorMax(String caption, int maxLength) {
         return new StringLengthValidator(String.format(LENGTH_WARNING_MAX, caption, maxLength), 0, maxLength);

@@ -1,6 +1,8 @@
 package com.haulmont.web.view.recipe;
 
 import com.haulmont.web.controller.Service;
+import com.haulmont.web.model.entity.Doctor;
+import com.haulmont.web.model.entity.Patient;
 import com.haulmont.web.view.Consts;
 import com.haulmont.web.view.recipe.sub.RecipeRow;
 import com.vaadin.data.Binder;
@@ -8,6 +10,8 @@ import com.vaadin.ui.*;
 
 public class RecipeEdit extends Window {
     private TextArea description = new TextArea("Description");
+    private ComboBox<Doctor> doctorByDoctor = new ComboBox<>("Doctor");
+    private ComboBox<Patient> patientByPatient = new ComboBox<>("Patient");
     private DateField creationLocalDate = new DateField("Creation Date");
     private DateField validityLocal = new DateField("Validity");
     private ComboBox<String> priority = new ComboBox<>("Priority");
@@ -19,8 +23,20 @@ public class RecipeEdit extends Window {
 
     private Button okButton, cancelButton;
 
+    // Непонятен способ маппинга отдельных полей на Vaadin ComboBox,
+    // пока ограничился выводом объекта класса
+
     public RecipeEdit(RecipeView mainView) {
         description.setMaxLength(300);
+
+        doctorByDoctor.setTextInputAllowed(false);
+        doctorByDoctor.setItems(service.findAllDoctors());
+            /*.stream()
+            .map(doctor -> doctor.getFirstName() + " " + doctor.getLastName())
+            .collect(Collectors.toList()));*/
+
+        patientByPatient.setTextInputAllowed(false);
+        patientByPatient.setItems(service.findAllPatients());
 
         creationLocalDate.setTextFieldEnabled(false);
         validityLocal.setTextFieldEnabled(false);
@@ -32,6 +48,14 @@ public class RecipeEdit extends Window {
             .withValidator(Consts.emptyValidator)
             .asRequired("Description is required")
             .bind(RecipeRow::getDescription, RecipeRow::setDescription);
+
+        binder.forField(doctorByDoctor)
+            .asRequired("Doctor is required")
+            .bind(RecipeRow::getDoctorByDoctor, RecipeRow::setDoctorByDoctor);
+
+        binder.forField(patientByPatient)
+            .asRequired("Patient is required")
+            .bind(RecipeRow::getPatientByPatient, RecipeRow::setPatientByPatient);
 
         binder.forField(creationLocalDate)
             .withValidator(Consts.dateValidator)
@@ -77,7 +101,7 @@ public class RecipeEdit extends Window {
         binder.setBean(recipeRow);
 
         VerticalLayout layout = new VerticalLayout();
-        layout.addComponents(description, creationLocalDate, validityLocal, priority, buttons);
+        layout.addComponents(description, doctorByDoctor, patientByPatient, creationLocalDate, validityLocal, priority, buttons);
 
         setContent(layout);
         setModal(true);

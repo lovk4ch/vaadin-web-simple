@@ -37,6 +37,7 @@ public class PatientEdit extends Window {
 
         binder.forField(phoneNumber)
             .withValidator(Consts.emptyValidator)
+            .withValidator(Consts.phoneValidator)
             .asRequired("Phone number is required")
             .bind(Patient::getPhoneNumber, Patient::setPhoneNumber);
 

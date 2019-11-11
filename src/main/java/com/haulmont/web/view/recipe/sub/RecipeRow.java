@@ -70,6 +70,8 @@ public class RecipeRow extends Recipe {
         recipe.setCreationDate(Date.valueOf(getCreationLocalDate()));
         recipe.setValidity(Date.valueOf(getValidityLocal()));
         recipe.setPriority(getPriority());
+        recipe.setDoctorByDoctor(getDoctorByDoctor());
+        recipe.setPatientByPatient(getPatientByPatient());
         return recipe;
     }
 }

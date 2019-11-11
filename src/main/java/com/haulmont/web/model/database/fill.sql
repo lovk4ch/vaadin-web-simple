@@ -8,11 +8,11 @@ INSERT INTO DOCTOR (FIRST_NAME, LAST_NAME, MIDDLE_NAME, SPECIALIZATION)
            ('Alexander', 'Nikitin', null, 'Infectious disease specialist');
 
 INSERT INTO PATIENT (FIRST_NAME, LAST_NAME, MIDDLE_NAME, PHONE_NUMBER)
-    values ('Agnette', 'Mc Kinsley', null, '+5991541'),
-           ('Nicole', 'Sanders', null, '+1955123'),
-           ('Michael', 'Danton', null, '+1193761'),
-           ('Anthony', 'Richards', null, '+3971665'),
-           ('Alter', 'Abdulmalik', 'Ibn Ogly', '+7917726');
+    values ('Agnette', 'Mc Kinsley', null, '599-154-1999'),
+           ('Nicole', 'Sanders', null, '491-926-7795'),
+           ('Michael', 'Danton', null, '544-819-3673'),
+           ('Anthony', 'Richards', null, '244-937-1840'),
+           ('Alter-Larrd', 'Abdulmalik', 'Ibn LA''AHAD', '966-115-4673');
 
 INSERT INTO RECIPE (DESCRIPTION, PATIENT, DOCTOR, CREATION_DATE, VALIDITY, PRIORITY)
     values ('Brainstorm',

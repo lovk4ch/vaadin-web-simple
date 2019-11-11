@@ -67,7 +67,7 @@ public class RecipeView extends VerticalLayout {
         deleteButton = new Button(Consts.DELETE,
             event -> {
                 if (grid.asSingleSelect().getValue() != null) {
-                    service.deleteRecipe(grid.asSingleSelect().getValue());
+                    service.deleteRecipe(grid.asSingleSelect().getValue().toRecipe());
                     updateList();
                 }
                 else {
@@ -85,11 +85,11 @@ public class RecipeView extends VerticalLayout {
 
     private void filter(String patient, String priority, String description) {
         grid.setItems(service.findAllRecipes().stream()
-                .map(RecipeRow::new)
-                .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
-                .filter(recipeRow -> recipeRow.getPriority().contains(priority))
-                .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
-                .collect(Collectors.toList()));
+            .map(RecipeRow::new)
+            .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
+            .filter(recipeRow -> recipeRow.getPriority().contains(priority))
+            .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
+            .collect(Collectors.toList()));
     }
 
     public void updateList() {

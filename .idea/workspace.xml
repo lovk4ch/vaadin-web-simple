@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Added recipes starter editor form">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/RecipeEdit.java" afterDir="false" />
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Added doctor and patient in recipe editor form">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/fill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/fill.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/Consts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/Consts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/doctor/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/doctor/DoctorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/RecipeEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/RecipeEdit.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/RecipeView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/RecipeView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/sub/Priority.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/sub/RecipeRow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/recipe/sub/RecipeRow.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -175,7 +174,7 @@
       <workItem from="1573324969081" duration="55518000" />
       <workItem from="1573435054048" duration="1311000" />
       <workItem from="1573436516563" duration="11000" />
-      <workItem from="1573476631292" duration="25609000" />
+      <workItem from="1573476631292" duration="32731000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1573436082631</created>
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573494573571</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added recipes starter editor form">
+      <created>1573506760023</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1573506760023</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +239,7 @@
     <MESSAGE value="Phone number set as required" />
     <MESSAGE value="Added recipes and filters" />
     <MESSAGE value="Added recipes starter editor form" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added recipes starter editor form" />
+    <MESSAGE value="Added doctor and patient in recipe editor form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added doctor and patient in recipe editor form" />
   </component>
 </project>
