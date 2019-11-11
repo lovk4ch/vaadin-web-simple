@@ -3,8 +3,9 @@ package com.haulmont.web.view.patient;
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.entity.Patient;
 import com.haulmont.web.view.Consts;
-import com.haulmont.web.view.patient.PatientEdit;
 import com.vaadin.ui.*;
+
+import javax.persistence.PersistenceException;
 
 public class PatientView extends VerticalLayout {
 
@@ -36,8 +37,12 @@ public class PatientView extends VerticalLayout {
         deleteButton = new Button(Consts.DELETE,
             event -> {
                 if (grid.asSingleSelect().getValue() != null) {
-                    service.deletePatient(grid.asSingleSelect().getValue());
-                    updateList();
+                    try {
+                        service.deletePatient(grid.asSingleSelect().getValue());
+                        updateList();
+                    } catch (PersistenceException e) {
+                        Notification.show(Consts.PATIENT_DELETE_ERROR);
+                    }
                 }
                 else {
                     Notification.show(Consts.SELECT_WARNING);

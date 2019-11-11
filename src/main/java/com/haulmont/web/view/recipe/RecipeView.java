@@ -2,7 +2,6 @@ package com.haulmont.web.view.recipe;
 
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.view.Consts;
-import com.haulmont.web.view.recipe.sub.Priority;
 import com.haulmont.web.view.recipe.sub.RecipeRow;
 import com.vaadin.data.HasValue;
 import com.vaadin.shared.ui.ValueChangeMode;
@@ -12,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class RecipeView extends VerticalLayout {
 
-    //private PatientEdit patientEdit = new PatientEdit(this);
+    private RecipeEdit recipeEdit = new RecipeEdit(this);
 
     private TextField filterPatient, filterDescription;
     private ComboBox filterPriority;
@@ -37,7 +36,7 @@ public class RecipeView extends VerticalLayout {
         filterPriority = new ComboBox();
         filterPriority.setPlaceholder("Filter by priority...");
         filterPriority.setTextInputAllowed(false);
-        filterPriority.setItems(Priority.values());
+        filterPriority.setItems(Consts.PRIORITIES);
         filterPriority.addValueChangeListener(changeListener);
 
         filterDescription = new TextField();
@@ -52,13 +51,13 @@ public class RecipeView extends VerticalLayout {
         grid.setSizeFull();
         addComponents(grid);
 
-        addButton = new Button(Consts.ADD);
-            //event -> patientEdit.add(new Patient()));
+        addButton = new Button(Consts.ADD,
+            event -> recipeEdit.add(new RecipeRow()));
 
         updateButton = new Button(Consts.UPDATE,
             event -> {
                 if (grid.asSingleSelect().getValue() != null) {
-                    //patientEdit.edit(grid.asSingleSelect().getValue());
+                    recipeEdit.edit(grid.asSingleSelect().getValue());
                 }
                 else {
                     Notification.show(Consts.SELECT_WARNING);
@@ -84,16 +83,16 @@ public class RecipeView extends VerticalLayout {
         updateList();
     }
 
-    public void updateList() {
-        grid.setItems(service.findAllRecipes().stream().map(RecipeRow::new).collect(Collectors.toList()));
+    private void filter(String patient, String priority, String description) {
+        grid.setItems(service.findAllRecipes().stream()
+                .map(RecipeRow::new)
+                .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
+                .filter(recipeRow -> recipeRow.getPriority().contains(priority))
+                .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
+                .collect(Collectors.toList()));
     }
 
-    public void filter(String patient, String priority, String description) {
-        grid.setItems(service.findAllRecipes().stream()
-            .map(RecipeRow::new)
-            .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
-            .filter(recipeRow -> recipeRow.getPriority().contains(priority))
-            .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
-            .collect(Collectors.toList()));
+    public void updateList() {
+        grid.setItems(service.findAllRecipes().stream().map(RecipeRow::new).collect(Collectors.toList()));
     }
 }
