@@ -36,7 +36,7 @@ public class PatientEdit extends Window {
             .asRequired("Last name is required")
             .bind(Patient::getLastName, Patient::setLastName);
 
-        binder.forField(lastName)
+        binder.forField(phoneNumber)
             .withValidator(Consts.emptyValidator)
             .asRequired("Phone number is required")
             .bind(Patient::getPhoneNumber, Patient::setPhoneNumber);

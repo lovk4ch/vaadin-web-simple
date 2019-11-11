@@ -1,19 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Added patient Table">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/dao/PatientDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/PatientView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/PatientEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/Service.java" afterDir="false" />
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/create.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/create.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/DoctorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/DoctorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/StatisticsView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/DoctorStatistics.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/edit/DoctorEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/DoctorEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/PatientEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/sub/PatientEdit.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +70,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../vaadin_web_simple'" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/fill.sql" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -187,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573436082631</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added patient Table">
+      <created>1573448817155</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1573448817155</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

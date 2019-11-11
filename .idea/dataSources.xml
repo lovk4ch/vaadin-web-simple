@@ -7,15 +7,5 @@
       <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
       <jdbc-url>jdbc:hsqldb:file:/database/src</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="84b08455-eeac-4f82-85bc-dc7077b5a376">
-      <driver-ref>hsqldb.local</driver-ref>
-      <synchronize>true</synchronize>
-      <imported>true</imported>
-      <remarks>Hibernate
-
-C:/Users/Professional/IdeaProjects/vaadin_web_simple/src/main/resources/hibernate.cfg.xml</remarks>
-      <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
-      <jdbc-url>jdbc:hsqldb:file:/database/src</jdbc-url>
-    </data-source>
   </component>
 </project>

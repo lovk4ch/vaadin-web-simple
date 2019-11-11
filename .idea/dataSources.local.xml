@@ -16,9 +16,5 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="hibernate.cfg.xml/Hibernate" uuid="84b08455-eeac-4f82-85bc-dc7077b5a376">
-      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="HSQLDB" exact-version="0" />
-      <schema-mapping />
-    </data-source>
   </component>
 </project>
