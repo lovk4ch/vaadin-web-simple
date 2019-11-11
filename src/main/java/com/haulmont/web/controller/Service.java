@@ -2,12 +2,15 @@ package com.haulmont.web.controller;
 
 import com.haulmont.web.controller.dao.DoctorDAO;
 import com.haulmont.web.controller.dao.PatientDAO;
+import com.haulmont.web.controller.dao.RecipeDAO;
 import com.haulmont.web.model.entity.Doctor;
 import com.haulmont.web.model.entity.Patient;
+import com.haulmont.web.model.entity.Recipe;
 
 import java.util.List;
 
 public class Service {
+    private RecipeDAO recipeDAO = new RecipeDAO();
     private DoctorDAO doctorDAO = new DoctorDAO();
     private PatientDAO patientDAO = new PatientDAO();
 
@@ -19,6 +22,29 @@ public class Service {
         }
         return instance;
     }
+
+    /* ----- Recipe service block ----- */
+
+    public Recipe findRecipe(long id) {
+        return recipeDAO.findById(id);
+    }
+
+    public void deleteRecipe(Recipe recipe) {
+        recipeDAO.delete(recipe);
+    }
+
+    public void saveRecipe(Recipe recipe) {
+        if (recipe.getId() == 0)
+            recipeDAO.save(recipe);
+        else
+            recipeDAO.update(recipe);
+    }
+
+    public List<Recipe> findAllRecipes() {
+        return recipeDAO.findAll();
+    }
+
+
 
     /* ----- Doctor service block ----- */
 
@@ -53,7 +79,7 @@ public class Service {
         return patientDAO.findById(id);
     }
 
-    public void deleteDoctor(Patient patient) {
+    public void deletePatient(Patient patient) {
         patientDAO.delete(patient);
     }
 

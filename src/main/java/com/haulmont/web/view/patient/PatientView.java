@@ -1,8 +1,9 @@
-package com.haulmont.web.view;
+package com.haulmont.web.view.patient;
 
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.entity.Patient;
-import com.haulmont.web.view.sub.PatientEdit;
+import com.haulmont.web.view.Consts;
+import com.haulmont.web.view.patient.PatientEdit;
 import com.vaadin.ui.*;
 
 public class PatientView extends VerticalLayout {
@@ -14,7 +15,7 @@ public class PatientView extends VerticalLayout {
 
     private Grid<Patient> grid = new Grid<>(Patient.class);
 
-    PatientView() {
+    public PatientView() {
         grid.setColumns("firstName", "lastName", "middleName", "phoneNumber");
         grid.setSizeFull();
         addComponents(grid);
@@ -35,7 +36,7 @@ public class PatientView extends VerticalLayout {
         deleteButton = new Button(Consts.DELETE,
             event -> {
                 if (grid.asSingleSelect().getValue() != null) {
-                    service.deleteDoctor(grid.asSingleSelect().getValue());
+                    service.deletePatient(grid.asSingleSelect().getValue());
                     updateList();
                 }
                 else {

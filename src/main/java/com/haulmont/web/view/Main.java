@@ -2,6 +2,9 @@ package com.haulmont.web.view;
 
 import javax.servlet.annotation.WebServlet;
 
+import com.haulmont.web.view.doctor.DoctorView;
+import com.haulmont.web.view.patient.PatientView;
+import com.haulmont.web.view.recipe.RecipeView;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.VaadinServletConfiguration;
 import com.vaadin.server.VaadinRequest;
@@ -27,6 +30,7 @@ public class Main extends UI {
         TabSheet tab = new TabSheet();
         tab.addTab(new DoctorView(), "Doctors");
         tab.addTab(new PatientView(), "Patients");
+        tab.addTab(new RecipeView(), "Recipe List");
         main.addComponent(tab);
         setContent(main);
         setSizeFull();

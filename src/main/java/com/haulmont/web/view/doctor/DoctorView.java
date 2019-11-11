@@ -1,9 +1,8 @@
-package com.haulmont.web.view;
+package com.haulmont.web.view.doctor;
 
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.entity.Doctor;
-import com.haulmont.web.view.sub.DoctorEdit;
-import com.haulmont.web.view.sub.DoctorStatistics;
+import com.haulmont.web.view.Consts;
 import com.vaadin.ui.*;
 
 public class DoctorView extends VerticalLayout {
@@ -15,7 +14,7 @@ public class DoctorView extends VerticalLayout {
 
     private Grid<Doctor> grid = new Grid<>(Doctor.class);
 
-    DoctorView() {
+    public DoctorView() {
         grid.setColumns("firstName", "lastName", "middleName", "specialization");
         grid.setSizeFull();
         addComponents(grid);
@@ -45,7 +44,7 @@ public class DoctorView extends VerticalLayout {
             });
 
         showStatButton = new Button(Consts.SHOW_STATS,
-            event -> new DoctorStatistics(this));
+            event -> new DoctorStats(this));
 
         HorizontalLayout options = new HorizontalLayout(addButton, updateButton, deleteButton, showStatButton);
 

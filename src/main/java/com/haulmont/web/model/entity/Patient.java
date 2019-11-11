@@ -15,6 +15,8 @@ public class Patient {
     private Collection<Recipe> recipesById;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Basic(optional = false)
     @Column(name = "ID", nullable = false)
     public long getId() {
         return id;

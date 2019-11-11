@@ -1,9 +1,8 @@
-package com.haulmont.web.view.sub;
+package com.haulmont.web.view.doctor;
 
 import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.entity.Doctor;
 import com.haulmont.web.view.Consts;
-import com.haulmont.web.view.DoctorView;
 import com.vaadin.data.Binder;
 import com.vaadin.ui.*;
 
@@ -20,7 +19,7 @@ public class DoctorEdit extends Window {
 
     private Button okButton, cancelButton;
 
-    public DoctorEdit(DoctorView mainView) {
+    DoctorEdit(DoctorView mainView) {
         firstName.setMaxLength(30);
         lastName.setMaxLength(30);
         middleName.setMaxLength(30);
