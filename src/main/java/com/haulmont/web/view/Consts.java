@@ -22,7 +22,7 @@ public class Consts {
     public static final String CANCEL = "Отменить";
     public static final String SHOW_STATS = "Показать статистику";
 
-    public static final String[] PRIORITIES = { "Normal", "Cito", "Statim" };
+    public static final String[] PRIORITIES = {"Normal", "Cito", "Statim"};
 
     public static Validator<LocalDate> dateValidator = Validator.from(Objects::nonNull, FILL_WARNING);
     public static Validator<String> emptyValidator = Validator.from(str -> str.length() > 0, FILL_WARNING);

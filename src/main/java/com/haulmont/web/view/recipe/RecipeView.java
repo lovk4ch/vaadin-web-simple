@@ -23,10 +23,10 @@ public class RecipeView extends VerticalLayout {
 
     public RecipeView() {
         HasValue.ValueChangeListener changeListener = (HasValue.ValueChangeListener) valueChangeEvent -> filter(
-            filterPatient.getValue(),
-            filterPriority.getSelectedItem().isPresent() ?
-            filterPriority.getSelectedItem().get().toString() : "",
-            filterDescription.getValue());
+                filterPatient.getValue(),
+                filterPriority.getSelectedItem().isPresent() ?
+                        filterPriority.getSelectedItem().get().toString() : "",
+                filterDescription.getValue());
 
         filterPatient = new TextField();
         filterPatient.setValueChangeMode(ValueChangeMode.EAGER);
@@ -52,28 +52,26 @@ public class RecipeView extends VerticalLayout {
         addComponents(grid);
 
         addButton = new Button(Consts.ADD,
-            event -> recipeEdit.add(new RecipeRow()));
+                event -> recipeEdit.add(new RecipeRow()));
 
         updateButton = new Button(Consts.UPDATE,
-            event -> {
-                if (grid.asSingleSelect().getValue() != null) {
-                    recipeEdit.edit(grid.asSingleSelect().getValue());
-                }
-                else {
-                    Notification.show(Consts.SELECT_WARNING);
-                }
-            });
+                event -> {
+                    if (grid.asSingleSelect().getValue() != null) {
+                        recipeEdit.edit(grid.asSingleSelect().getValue());
+                    } else {
+                        Notification.show(Consts.SELECT_WARNING);
+                    }
+                });
 
         deleteButton = new Button(Consts.DELETE,
-            event -> {
-                if (grid.asSingleSelect().getValue() != null) {
-                    service.deleteRecipe(grid.asSingleSelect().getValue().toRecipe());
-                    updateList();
-                }
-                else {
-                    Notification.show(Consts.SELECT_WARNING);
-                }
-            });
+                event -> {
+                    if (grid.asSingleSelect().getValue() != null) {
+                        service.deleteRecipe(grid.asSingleSelect().getValue().toRecipe());
+                        updateList();
+                    } else {
+                        Notification.show(Consts.SELECT_WARNING);
+                    }
+                });
 
         HorizontalLayout options = new HorizontalLayout(addButton, updateButton, deleteButton);
 
@@ -85,11 +83,11 @@ public class RecipeView extends VerticalLayout {
 
     private void filter(String patient, String priority, String description) {
         grid.setItems(service.findAllRecipes().stream()
-            .map(RecipeRow::new)
-            .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
-            .filter(recipeRow -> recipeRow.getPriority().contains(priority))
-            .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
-            .collect(Collectors.toList()));
+                .map(RecipeRow::new)
+                .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient))
+                .filter(recipeRow -> recipeRow.getPriority().contains(priority))
+                .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description))
+                .collect(Collectors.toList()));
     }
 
     public void updateList() {

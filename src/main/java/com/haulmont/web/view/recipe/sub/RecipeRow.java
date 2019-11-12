@@ -24,7 +24,7 @@ public class RecipeRow extends Recipe {
     }
 
     private void setPatient(String patientFirstName, String patientLastName) {
-        this.patient = patientFirstName+ " " + patientLastName;
+        this.patient = patientFirstName + " " + patientLastName;
     }
 
     public LocalDate getCreationLocalDate() {
@@ -43,7 +43,8 @@ public class RecipeRow extends Recipe {
         this.validityLocal = validityLocal;
     }
 
-    public RecipeRow() {}
+    public RecipeRow() {
+    }
 
     public RecipeRow(Recipe recipe) {
         setId(recipe.getId());

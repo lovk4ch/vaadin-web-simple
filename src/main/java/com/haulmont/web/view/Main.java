@@ -22,7 +22,8 @@ import com.vaadin.ui.*;
 public class Main extends UI {
     @WebServlet(urlPatterns = "/*", name = "ProjectServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = Main.class, productionMode = false)
-    public static class ProjectServlet extends VaadinServlet {}
+    public static class ProjectServlet extends VaadinServlet {
+    }
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {

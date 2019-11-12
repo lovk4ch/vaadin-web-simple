@@ -26,19 +26,19 @@ public class DoctorEdit extends Window {
         specialization.setMaxLength(30);
 
         binder.forField(firstName)
-            .withValidator(Consts.emptyValidator)
-            .asRequired("First name is required")
-            .bind(Doctor::getFirstName, Doctor::setFirstName);
+                .withValidator(Consts.emptyValidator)
+                .asRequired("First name is required")
+                .bind(Doctor::getFirstName, Doctor::setFirstName);
 
         binder.forField(lastName)
-            .withValidator(Consts.emptyValidator)
-            .asRequired("Last name is required")
-            .bind(Doctor::getLastName, Doctor::setLastName);
+                .withValidator(Consts.emptyValidator)
+                .asRequired("Last name is required")
+                .bind(Doctor::getLastName, Doctor::setLastName);
 
         binder.forField(specialization)
-            .withValidator(Consts.emptyValidator)
-            .asRequired("Specialization is required")
-            .bind(Doctor::getSpecialization, Doctor::setSpecialization);
+                .withValidator(Consts.emptyValidator)
+                .asRequired("Specialization is required")
+                .bind(Doctor::getSpecialization, Doctor::setSpecialization);
 
         binder.bindInstanceFields(this);
         this.mainView = mainView;
@@ -46,23 +46,23 @@ public class DoctorEdit extends Window {
 
     private void update(Doctor doctor, String header) {
         okButton = new Button(Consts.OK,
-            clickEvent -> {
-                if (binder.validate().isOk()) {
-                    service.saveDoctor(doctor);
+                clickEvent -> {
+                    if (binder.validate().isOk()) {
+                        service.saveDoctor(doctor);
+                        mainView.updateList();
+                        close();
+                        binder.setBean(null);
+                    } else {
+                        Notification.show(binder.validate()
+                                .getValidationErrors().get(0).getErrorMessage());
+                    }
+                });
+        cancelButton = new Button(Consts.CANCEL,
+                clickEvent -> {
                     mainView.updateList();
                     close();
                     binder.setBean(null);
-                } else {
-                    Notification.show(binder.validate()
-                        .getValidationErrors().get(0).getErrorMessage());
-                }
-            });
-        cancelButton = new Button(Consts.CANCEL,
-            clickEvent -> {
-                mainView.updateList();
-                close();
-                binder.setBean(null);
-            });
+                });
         HorizontalLayout buttons = new HorizontalLayout();
         buttons.addComponents(okButton, cancelButton);
 

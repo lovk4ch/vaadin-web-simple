@@ -22,32 +22,30 @@ public class PatientView extends VerticalLayout {
         addComponents(grid);
 
         addButton = new Button(Consts.ADD,
-            event -> patientEdit.add(new Patient()));
+                event -> patientEdit.add(new Patient()));
 
         updateButton = new Button(Consts.UPDATE,
-            event -> {
-                if (grid.asSingleSelect().getValue() != null) {
-                    patientEdit.edit(grid.asSingleSelect().getValue());
-                }
-                else {
-                    Notification.show(Consts.SELECT_WARNING);
-                }
-            });
+                event -> {
+                    if (grid.asSingleSelect().getValue() != null) {
+                        patientEdit.edit(grid.asSingleSelect().getValue());
+                    } else {
+                        Notification.show(Consts.SELECT_WARNING);
+                    }
+                });
 
         deleteButton = new Button(Consts.DELETE,
-            event -> {
-                if (grid.asSingleSelect().getValue() != null) {
-                    try {
-                        service.deletePatient(grid.asSingleSelect().getValue());
-                        updateList();
-                    } catch (PersistenceException e) {
-                        Notification.show(Consts.PATIENT_DELETE_ERROR);
+                event -> {
+                    if (grid.asSingleSelect().getValue() != null) {
+                        try {
+                            service.deletePatient(grid.asSingleSelect().getValue());
+                            updateList();
+                        } catch (PersistenceException e) {
+                            Notification.show(Consts.PATIENT_DELETE_ERROR);
+                        }
+                    } else {
+                        Notification.show(Consts.SELECT_WARNING);
                     }
-                }
-                else {
-                    Notification.show(Consts.SELECT_WARNING);
-                }
-            });
+                });
 
         HorizontalLayout options = new HorizontalLayout(addButton, updateButton, deleteButton);
 

@@ -24,7 +24,7 @@ public class DoctorStats {
         List<StatsRow> s = new ArrayList<>();
         for (Object[] o : recipeStatistic) {
             s.add(new StatsRow(
-                (String)o[0], (String)o[1], (Integer)o[2]
+                    (String) o[0], (String) o[1], (Integer) o[2]
             ));
         }
 
@@ -36,9 +36,9 @@ public class DoctorStats {
         Window window = new Window("Statistics");
 
         okButton = new Button(Consts.OK,
-            clickEvent -> {
-                window.close();
-            });
+                clickEvent -> {
+                    window.close();
+                });
 
         final VerticalLayout layout = new VerticalLayout();
         layout.addComponents(grid, okButton);

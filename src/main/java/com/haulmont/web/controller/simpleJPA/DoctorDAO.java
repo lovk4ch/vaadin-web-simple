@@ -26,13 +26,13 @@ public class DoctorDAO {
             Class.forName("org.hsqldb.jdbc.JDBCDriver");
             //Creating the connection with HSQLDB
             con = DriverManager.getConnection("jdbc:hsqldb:file:/database/src", "SA", "");
-            if (con!= null) {
+            if (con != null) {
                 System.out.println("Connection Successful!");
             } else {
                 System.out.println("Problem with connection");
                 System.exit(0);
             }
-        }  catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(System.out);
         }
     }
@@ -52,10 +52,9 @@ public class DoctorDAO {
                 doctor.setSpecialization(rs.getString(SPECIALIZATION));
                 doctors.add(doctor);
             }
-            if(st != null)
+            if (st != null)
                 st.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(System.out);
         }
         return doctors;
@@ -70,10 +69,9 @@ public class DoctorDAO {
                     + doctor.getMiddleName() + "\', \'"
                     + doctor.getSpecialization() + "\');"
             );
-            if(st != null)
+            if (st != null)
                 st.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(System.out);
         }
     }
@@ -88,10 +86,9 @@ public class DoctorDAO {
                     + "\', " + SPECIALIZATION + " = \'" + doctor.getSpecialization()
                     + "\' where id = " + doctor.getId()
             );
-            if(st != null)
+            if (st != null)
                 st.close();
-        }
-        catch (Exception e) {
+        } catch (Exception e) {
             e.printStackTrace(System.out);
         }
     }
