@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,16 +22,16 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HSQLDB (Local)" type="feb32156:DbDataSourceImpl" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HSQLDB (Local)" type="feb32156:DbDataSourceImpl" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="HSQLDB (Local)" type="feb32156:DbDataSourceImpl" />
+        <item name="hibernate.cfg.xml/Hibernate" type="feb32156:DbDataSourceImpl" />
         <item name="PUBLIC: database" type="5208c322:HsqlImplModel$Database" />
         <item name="PUBLIC: schema" type="d266ad14:HsqlImplModel$Schema" />
       </path>
@@ -173,7 +171,7 @@
       <workItem from="1573515778049" duration="22000" />
       <workItem from="1573519441582" duration="2110000" />
       <workItem from="1573528240757" duration="1834000" />
-      <workItem from="1573558315258" duration="17000" />
+      <workItem from="1573558315258" duration="317000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1573436082631</created>
@@ -217,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573520427305</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Removed excess configuration">
+      <created>1573558427649</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573558427649</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +253,7 @@
     <MESSAGE value="Added doctor and patient in recipe editor form" />
     <MESSAGE value="Update recipe editor" />
     <MESSAGE value="Update codestyle" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update codestyle" />
+    <MESSAGE value="Removed excess configuration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed excess configuration" />
   </component>
 </project>
