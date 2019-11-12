@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="HSQLDB (Local)" uuid="deedc1d8-199c-4e74-a625-759265f30cfa">
+    <data-source source="LOCAL" name="hibernate.cfg.xml/Hibernate" uuid="f9d1749d-ad88-41e8-9590-d01d4d8b9503">
       <driver-ref>hsqldb.local</driver-ref>
       <synchronize>true</synchronize>
+      <imported>true</imported>
+      <remarks>Hibernate
+
+C:/Users/Professional/IdeaProjects/vaadin-web-simple/src/main/resources/hibernate.cfg.xml</remarks>
       <jdbc-driver>org.hsqldb.jdbc.JDBCDriver</jdbc-driver>
       <jdbc-url>jdbc:hsqldb:file:/database/src</jdbc-url>
     </data-source>
