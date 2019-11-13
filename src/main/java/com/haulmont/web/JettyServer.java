@@ -14,7 +14,7 @@ public class JettyServer {
 
     public static void main(String[] args) throws Exception {
 
-        URL webRootLocation = JettyServer.class.getResource("/webapp/");
+        URL webRootLocation = JettyServer.class.getResource("");
         URI webRootUri = webRootLocation.toURI();
 
         WebAppContext context = new WebAppContext();

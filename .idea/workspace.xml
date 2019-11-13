@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="">
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Update config for embedded jetty">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/JettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/JettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/MainView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

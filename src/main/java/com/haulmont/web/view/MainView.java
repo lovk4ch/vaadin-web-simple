@@ -20,7 +20,7 @@ import com.vaadin.ui.*;
  */
 @Theme("mytheme")
 public class MainView extends UI {
-    @WebServlet(value = "/*", urlPatterns = "/*", name = "ProjectServlet", asyncSupported = true)
+    @WebServlet(urlPatterns = "/*", name = "ProjectServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MainView.class, productionMode = false)
     public static class ProjectServlet extends VaadinServlet {
     }

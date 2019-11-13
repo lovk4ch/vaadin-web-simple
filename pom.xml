@@ -198,7 +198,7 @@
 
 		<resources>
 			<resource>
-				<directory>src/main</directory>
+				<directory>src/main/webapp</directory>
 				<filtering>true</filtering>
 			</resource>
 		</resources>
