@@ -4,13 +4,12 @@ import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.util.resource.Resource;
 import org.eclipse.jetty.webapp.*;
 
-import javax.servlet.ServletContextEvent;
-import javax.servlet.ServletContextListener;
 import java.net.URI;
 import java.net.URL;
 
 public class JettyServer {
     private static final String JAR_PATTERN = "org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern";
+    private static final String DESCRIPTOR = "src/main/webapp/web.xml";
     private static int httpPort = 8080;
 
     public static void main(String[] args) throws Exception {
@@ -23,18 +22,7 @@ public class JettyServer {
         context.setContextPath("/");
         context.setAttribute(JAR_PATTERN , ".*");
         context.setConfigurationDiscovered(true);
-        context.getServletContext().setExtendedListenerTypes(true);
-        context.addEventListener(new ServletContextListener() {
-            @Override
-            public void contextInitialized(ServletContextEvent servletContextEvent) {
-
-            }
-
-            @Override
-            public void contextDestroyed(ServletContextEvent servletContextEvent) {
-
-            }
-        });
+        context.setDescriptor(DESCRIPTOR);
 
         Server server = new Server(httpPort);
         server.setHandler(context);

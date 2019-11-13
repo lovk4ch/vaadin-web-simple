@@ -27,6 +27,17 @@
           <element id="library" level="project" name="Maven: com.vaadin:vaadin-client-compiled:8.0.5" />
           <element id="library" level="project" name="Maven: com.vaadin:vaadin-themes:8.0.5" />
           <element id="library" level="project" name="Maven: org.hsqldb:hsqldb:2.4.0" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-server:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty.orbit:javax.servlet:3.0.0.v201112011016" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-http:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-servlet:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-security:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-webapp:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-xml:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-continuation:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-websocket:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-util:8.2.0.v20160908" />
+          <element id="library" level="project" name="Maven: org.eclipse.jetty:jetty-io:8.2.0.v20160908" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-core:5.4.8.Final" />
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" />
           <element id="library" level="project" name="Maven: javax.persistence:javax.persistence-api:2.2" />

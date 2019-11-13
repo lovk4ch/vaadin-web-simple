@@ -17,11 +17,11 @@
 		<hibernate.version>5.4.8.Final</hibernate.version>
 		<vaadin.version>8.0.5</vaadin.version>
 		<vaadin.plugin.version>8.0.5</vaadin.plugin.version>
-		<jetty.plugin.version>9.4.22.v20191022</jetty.plugin.version>
+		<!--<jetty.plugin.version>9.4.22.v20191022</jetty.plugin.version>-->
+		<jetty.plugin.version>8.2.0.v20160908</jetty.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
-		<!-- If there are no local customisations, this can also be "fetch" or "cdn" -->
 		<vaadin.widgetset.mode>local</vaadin.widgetset.mode>
 	</properties>
 
@@ -88,6 +88,27 @@
 			<artifactId>jetty-webapp</artifactId>
 			<version>${jetty.plugin.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-continuation</artifactId>
+			<version>${jetty.plugin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-websocket</artifactId>
+			<version>${jetty.plugin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-util</artifactId>
+			<version>${jetty.plugin.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-io</artifactId>
+			<version>${jetty.plugin.version}</version>
+		</dependency>
+
 
 		<!-- Hibernate -->
 		<dependency>
@@ -115,9 +136,13 @@
 				<groupId>com.vaadin</groupId>
 				<artifactId>vaadin-maven-plugin</artifactId>
 				<version>${vaadin.plugin.version}</version>
+				<configuration>
+					<widgetsetMode>${vaadin.widgetset.mode}</widgetsetMode>
+				</configuration>
 				<executions>
 					<execution>
 						<goals>
+							<goal>resources</goal>
 							<goal>update-theme</goal>
 							<goal>update-widgetset</goal>
 							<goal>compile</goal>
