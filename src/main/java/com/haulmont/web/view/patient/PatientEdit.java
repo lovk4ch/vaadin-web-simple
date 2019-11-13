@@ -70,6 +70,7 @@ public class PatientEdit extends Window {
         binder.setBean(patient);
 
         VerticalLayout layout = new VerticalLayout();
+        layout.setSizeFull();
         layout.addComponents(firstName, lastName, middleName, phoneNumber, buttons);
 
         setContent(layout);

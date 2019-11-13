@@ -23,9 +23,6 @@ public class RecipeEdit extends Window {
 
     private Button okButton, cancelButton;
 
-    // Непонятен способ маппинга отдельных полей на Vaadin ComboBox,
-    // пока ограничился выводом объекта класса
-
     public RecipeEdit(RecipeView mainView) {
         setWidth("500");
 
@@ -35,13 +32,14 @@ public class RecipeEdit extends Window {
         doctorByDoctor.setTextInputAllowed(false);
         doctorByDoctor.setSizeFull();
         doctorByDoctor.setItems(service.findAllDoctors());
-            /*.stream()
-            .map(doctor -> doctor.getFirstName() + " " + doctor.getLastName())
-            .collect(Collectors.toList()));*/
+        doctorByDoctor.setItemCaptionGenerator(
+                doctor -> doctor.getFirstName() + " " + doctor.getLastName());
 
         patientByPatient.setTextInputAllowed(false);
         patientByPatient.setSizeFull();
         patientByPatient.setItems(service.findAllPatients());
+        patientByPatient.setItemCaptionGenerator(
+                patient -> patient.getFirstName() + " " + patient.getLastName());
 
         creationLocalDate.setTextFieldEnabled(false);
         creationLocalDate.setSizeFull();

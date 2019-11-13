@@ -45,9 +45,9 @@ public class DoctorDAO {
     public List<Object[]> getStatistics() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
         List list = session.createSQLQuery(
-                "SELECT D.FIRST_NAME, D.LAST_NAME as doctor, (SELECT COUNT (R.DOCTOR)"
-                        + " from RECIPE R where R.DOCTOR = D.ID)"
-                        + " as recipe from DOCTOR D")
+                "SELECT D.first_name as first_name, D.last_name as last_name, (SELECT COUNT (R.doctor)"
+                        + " from recipe R where R.doctor = D.ID)"
+                        + " as recipe from doctor D")
                 .addScalar("first_name", StringType.INSTANCE)
                 .addScalar("last_name", StringType.INSTANCE)
                 .addScalar("recipe", IntegerType.INSTANCE)

@@ -69,6 +69,7 @@ public class DoctorEdit extends Window {
         binder.setBean(doctor);
 
         VerticalLayout layout = new VerticalLayout();
+        layout.setSizeFull();
         layout.addComponents(firstName, lastName, middleName, specialization, buttons);
 
         setContent(layout);
