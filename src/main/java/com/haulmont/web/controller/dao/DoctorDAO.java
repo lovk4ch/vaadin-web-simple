@@ -47,7 +47,7 @@ public class DoctorDAO {
         List list = session.createSQLQuery(
                 "SELECT D.FIRST_NAME, D.LAST_NAME as doctor, (SELECT COUNT (R.DOCTOR)"
                         + " from RECIPE R where R.DOCTOR = D.ID)"
-                        + " as recipe FROM DOCTOR D")
+                        + " as recipe from DOCTOR D")
                 .addScalar("first_name", StringType.INSTANCE)
                 .addScalar("last_name", StringType.INSTANCE)
                 .addScalar("recipe", IntegerType.INSTANCE)

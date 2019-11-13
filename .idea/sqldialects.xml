@@ -4,6 +4,6 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/haulmont/web/controller/dao/DoctorDAO.java" dialect="GenericSQL" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/create.sql" dialect="HSQLDB" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/haulmont/web/model/database/fill.sql" dialect="HSQLDB" />
-    <file url="PROJECT" dialect="HSQLDB" />
+    <file url="PROJECT" dialect="PostgreSQL" />
   </component>
 </project>
