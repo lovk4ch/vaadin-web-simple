@@ -1,8 +1,8 @@
 package com.haulmont.web.controller;
 
-import com.haulmont.web.model.entity.Recipe;
 import com.haulmont.web.model.entity.Doctor;
 import com.haulmont.web.model.entity.Patient;
+import com.haulmont.web.model.entity.Recipe;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
