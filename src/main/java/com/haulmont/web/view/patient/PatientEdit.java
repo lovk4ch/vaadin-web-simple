@@ -25,6 +25,11 @@ public class PatientEdit extends Window {
         middleName.setMaxLength(30);
         phoneNumber.setMaxLength(15);
 
+        firstName.setSizeFull();
+        lastName.setSizeFull();
+        middleName.setSizeFull();
+        phoneNumber.setSizeFull();
+
         binder.forField(firstName)
                 .withValidator(Consts.emptyValidator)
                 .asRequired("First name is required")
@@ -70,7 +75,6 @@ public class PatientEdit extends Window {
         binder.setBean(patient);
 
         VerticalLayout layout = new VerticalLayout();
-        layout.setSizeFull();
         layout.addComponents(firstName, lastName, middleName, phoneNumber, buttons);
 
         setContent(layout);

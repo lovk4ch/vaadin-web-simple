@@ -25,6 +25,11 @@ public class DoctorEdit extends Window {
         middleName.setMaxLength(30);
         specialization.setMaxLength(30);
 
+        firstName.setSizeFull();
+        lastName.setSizeFull();
+        middleName.setSizeFull();
+        specialization.setSizeFull();
+
         binder.forField(firstName)
                 .withValidator(Consts.emptyValidator)
                 .asRequired("First name is required")
@@ -69,7 +74,6 @@ public class DoctorEdit extends Window {
         binder.setBean(doctor);
 
         VerticalLayout layout = new VerticalLayout();
-        layout.setSizeFull();
         layout.addComponents(firstName, lastName, middleName, specialization, buttons);
 
         setContent(layout);
