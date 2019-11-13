@@ -4,7 +4,7 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:hsqldb:file:/database/src</property>
+    <property name="connection.url">jdbc:hsqldb:file:/database/src;readonly=true</property>
     <property name="connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property>
     <mapping class="com.haulmont.web.model.entity.Doctor"/>
     <mapping class="com.haulmont.web.model.entity.Patient"/>
