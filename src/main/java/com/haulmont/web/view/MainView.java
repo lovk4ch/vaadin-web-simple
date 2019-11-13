@@ -19,9 +19,9 @@ import com.vaadin.ui.*;
  * overridden to add component to the user interface and initialize non-component functionality.
  */
 @Theme("mytheme")
-public class Main extends UI {
-    @WebServlet(urlPatterns = "/*", name = "ProjectServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = Main.class, productionMode = false)
+public class MainView extends UI {
+    @WebServlet(value = "/*", urlPatterns = "/*", name = "ProjectServlet", asyncSupported = true)
+    @VaadinServletConfiguration(ui = MainView.class, productionMode = false)
     public static class ProjectServlet extends VaadinServlet {
     }
 

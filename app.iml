@@ -48,6 +48,14 @@
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-client-compiled:8.0.5" level="project" />
     <orderEntry type="library" name="Maven: com.vaadin:vaadin-themes:8.0.5" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: org.hsqldb:hsqldb:2.4.0" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-server:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-http:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-util:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-io:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-servlet:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-security:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-webapp:9.4.22.v20191022" level="project" />
+    <orderEntry type="library" name="Maven: org.eclipse.jetty:jetty-xml:9.4.22.v20191022" level="project" />
     <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:5.4.8.Final" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.logging:jboss-logging:3.3.2.Final" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:javax.persistence-api:2.2" level="project" />

@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="" />
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Update app for heroku">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_security_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_servlet_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_webapp_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_xml_9_4_22_v20191022.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/JettyServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa/storage_v2/_src_/database/PUBLIC.aaZQjQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa/storage_v2/_src_/database/PUBLIC.aaZQjQ/schema/INFORMATION_SCHEMA.NBgcMw.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/deedc1d8-199c-4e74-a625-759265f30cfa/storage_v2/_src_/database/PUBLIC.aaZQjQ/schema/SYSTEM_LOBS.JJWSJg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/MainView.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +74,11 @@
         <option value="lovk4ch" />
       </list>
     </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1TMEHeYBNP2q34lc16AiTCgwYlB" />
@@ -62,8 +86,10 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="hsqldb" />
     <property name="JPA.DatabaseSchemaImportDialog" value="deedc1d8-199c-4e74-a625-759265f30cfa" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
@@ -75,7 +101,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -97,7 +123,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.JettyServer">
+    <configuration name="JettyServer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.haulmont.web.JettyServer" />
+      <module name="app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.haulmont.web.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -148,6 +187,11 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.JettyServer" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -171,7 +215,9 @@
       <workItem from="1573515778049" duration="22000" />
       <workItem from="1573519441582" duration="2110000" />
       <workItem from="1573528240757" duration="1834000" />
-      <workItem from="1573558315258" duration="317000" />
+      <workItem from="1573558315258" duration="2292000" />
+      <workItem from="1573599262968" duration="4953000" />
+      <workItem from="1573604236864" duration="7330000" />
     </task>
     <task id="LOCAL-00001" summary="Init">
       <created>1573436082631</created>
@@ -222,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573558427649</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Update source">
+      <created>1573558657779</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1573558657779</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +295,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <ignored-roots>
       <path value="$PROJECT_DIR$/src" />
     </ignored-roots>
@@ -254,6 +308,7 @@
     <MESSAGE value="Update recipe editor" />
     <MESSAGE value="Update codestyle" />
     <MESSAGE value="Removed excess configuration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed excess configuration" />
+    <MESSAGE value="Update source" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update source" />
   </component>
 </project>
