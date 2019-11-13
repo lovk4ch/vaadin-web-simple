@@ -4,8 +4,10 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:hsqldb:file:/database/src;readonly=true</property>
-    <property name="connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property>
+    <property name="connection.url">jdbc:postgres://ikowhynddrwtmo:3a4e41375821ba119f0523c85d387538545aebd7dabca1470de7c53244b907ed@ec2-50-16-225-96.compute-1.amazonaws.com:5432/dbndqp5raijhkq</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">ikowhynddrwtmo</property>
+    <property name="connection.password">3a4e41375821ba119f0523c85d387538545aebd7dabca1470de7c53244b907ed</property>
     <mapping class="com.haulmont.web.model.entity.Doctor"/>
     <mapping class="com.haulmont.web.model.entity.Patient"/>
     <mapping class="com.haulmont.web.model.entity.Recipe"/>
