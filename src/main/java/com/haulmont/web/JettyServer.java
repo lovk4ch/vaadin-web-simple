@@ -10,7 +10,7 @@ import java.net.URL;
 public class JettyServer {
     private static final String JAR_PATTERN = "org.eclipse.jetty.server.webapp.ContainerIncludeJarPattern";
     private static final String DESCRIPTOR = "src/main/webapp/web.xml";
-    private static int httpPort = 8080;
+    private static String httpPort = System.getenv("PORT");
 
     public static void main(String[] args) throws Exception {
 
@@ -24,7 +24,7 @@ public class JettyServer {
         context.setConfigurationDiscovered(true);
         context.setDescriptor(DESCRIPTOR);
 
-        Server server = new Server(httpPort);
+        Server server = new Server(Integer.parseInt(httpPort));
         server.setHandler(context);
         server.start();
         server.join();

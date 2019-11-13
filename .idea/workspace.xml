@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="Update config for embedded jetty">
+    <list default="true" id="e221cb5c-48a0-4913-941a-ef0fabf4ed8e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/JettyServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/JettyServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/MainView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,10 +96,10 @@
       <recent name="com.haulmont.web.model.entity" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Professional\IdeaProjects\vaadin-web-simple\src\main\webapp" />
       <recent name="C:\Users\Professional\IdeaProjects\vaadin-web-simple\src\main" />
       <recent name="C:\Users\Professional\IdeaProjects\vaadin-web-simple\src\main\resources" />
       <recent name="C:\Users\Professional\IdeaProjects\vaadin-web-simple\src" />
-      <recent name="C:\Users\Professional\IdeaProjects\vaadin-web-simple\src\main\webapp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573660004927</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Update">
+      <created>1573663862284</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573663862284</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,6 +323,7 @@
     <MESSAGE value="Update source" />
     <MESSAGE value="Update app for heroku" />
     <MESSAGE value="Update config for embedded jetty" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update config for embedded jetty" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
