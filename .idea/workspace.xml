@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c8e4538e-168e-4bf8-869d-21eebb82b374" name="Default Changelist" comment="Update [connection]">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/doctor/DoctorEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/doctor/DoctorEdit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/haulmont/web/view/patient/PatientEdit.java" afterDir="false" />
-    </list>
+    <list default="true" id="c8e4538e-168e-4bf8-869d-21eebb82b374" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
