@@ -24,7 +24,7 @@ public class JettyServer {
         context.setConfigurationDiscovered(true);
         context.setDescriptor(DESCRIPTOR);
 
-        int port = httpPort == null ? 5000 : Integer.parseInt(httpPort);
+        int port = httpPort == null ? 8080 : Integer.parseInt(httpPort);
         Server server = new Server(port);
         server.setHandler(context);
         server.start();
