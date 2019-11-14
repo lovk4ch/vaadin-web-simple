@@ -4,8 +4,10 @@ import com.haulmont.web.controller.Service;
 import com.haulmont.web.model.Doctor;
 import com.haulmont.web.view.Consts;
 import com.vaadin.ui.*;
+import org.hibernate.exception.SQLGrammarException;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class DoctorView extends VerticalLayout {
 
@@ -59,6 +61,12 @@ public class DoctorView extends VerticalLayout {
     }
 
     public void updateList() {
-        grid.setItems(service.findAllDoctors());
+        List<Doctor> doctors = service.findAllDoctors();
+        if (doctors != null) {
+            grid.setItems(doctors);
+        }
+        else {
+            Notification.show(Consts.DATABASE_ERROR);
+        }
     }
 }

@@ -4,9 +4,11 @@ import com.haulmont.web.controller.HibernateSessionFactoryUtil;
 import com.haulmont.web.model.Doctor;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
+import org.hibernate.exception.SQLGrammarException;
 import org.hibernate.type.IntegerType;
 import org.hibernate.type.StringType;
 
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class DoctorDAO {
@@ -58,8 +60,12 @@ public class DoctorDAO {
 
     public List<Doctor> findAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        List<Doctor> users = (List<Doctor>) session.createQuery("From Doctor ").list();
-        session.close();
-        return users;
+        try {
+            List<Doctor> users = (List<Doctor>) session.createQuery("From Doctor ").list();
+            session.close();
+            return users;
+        } catch (PersistenceException e) {
+            return null;
+        }
     }
 }

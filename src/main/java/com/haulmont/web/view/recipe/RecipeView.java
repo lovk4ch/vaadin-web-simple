@@ -1,12 +1,14 @@
 package com.haulmont.web.view.recipe;
 
 import com.haulmont.web.controller.Service;
+import com.haulmont.web.model.Recipe;
 import com.haulmont.web.view.Consts;
 import com.haulmont.web.view.recipe.sub.RecipeRow;
 import com.vaadin.data.HasValue;
 import com.vaadin.shared.ui.ValueChangeMode;
 import com.vaadin.ui.*;
 
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class RecipeView extends VerticalLayout {
@@ -82,15 +84,27 @@ public class RecipeView extends VerticalLayout {
     }
 
     private void filter(String patient, String priority, String description) {
-        grid.setItems(service.findAllRecipes().stream()
-                .map(RecipeRow::new)
-                .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient.toLowerCase()))
-                .filter(recipeRow -> recipeRow.getPriority().contains(priority.toLowerCase()))
-                .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description.toLowerCase()))
-                .collect(Collectors.toList()));
+        List<Recipe> recipes = service.findAllRecipes();
+        if (recipes != null) {
+            grid.setItems(service.findAllRecipes().stream()
+                    .map(RecipeRow::new)
+                    .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient.toLowerCase()))
+                    .filter(recipeRow -> recipeRow.getPriority().contains(priority.toLowerCase()))
+                    .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description.toLowerCase()))
+                    .collect(Collectors.toList()));
+        }
+        else {
+            Notification.show(Consts.DATABASE_ERROR);
+        }
     }
 
     public void updateList() {
-        grid.setItems(service.findAllRecipes().stream().map(RecipeRow::new).collect(Collectors.toList()));
+        List<Recipe> recipes = service.findAllRecipes();
+        if (recipes != null) {
+            grid.setItems(service.findAllRecipes().stream().map(RecipeRow::new).collect(Collectors.toList()));
+        }
+        else {
+            Notification.show(Consts.DATABASE_ERROR);
+        }
     }
 }

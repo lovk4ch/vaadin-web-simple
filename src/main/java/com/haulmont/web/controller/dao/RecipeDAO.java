@@ -5,6 +5,7 @@ import com.haulmont.web.model.Recipe;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class RecipeDAO {
@@ -42,8 +43,12 @@ public class RecipeDAO {
 
     public List<Recipe> findAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        List<Recipe> recipes = (List<Recipe>) session.createQuery("From Recipe ").list();
-        session.close();
-        return recipes;
+        try {
+            List<Recipe> recipes = (List<Recipe>) session.createQuery("From Recipe ").list();
+            session.close();
+            return recipes;
+        } catch (PersistenceException e) {
+            return null;
+        }
     }
 }

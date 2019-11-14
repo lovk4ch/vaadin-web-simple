@@ -6,6 +6,7 @@ import com.haulmont.web.view.Consts;
 import com.vaadin.ui.*;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class PatientView extends VerticalLayout {
 
@@ -56,6 +57,12 @@ public class PatientView extends VerticalLayout {
     }
 
     public void updateList() {
-        grid.setItems(service.findAllPatients());
+        List<Patient> patients = service.findAllPatients();
+        if (patients != null) {
+            grid.setItems(patients);
+        }
+        else {
+            Notification.show(Consts.DATABASE_ERROR);
+        }
     }
 }

@@ -7,6 +7,7 @@ import java.util.Objects;
 
 public class Consts {
 
+    public static final String DATABASE_ERROR = "Internal database error. Data cannot be loaded.";
     public static final String DOCTOR_DELETE_ERROR = "This doctor can't be deleted because he has prescribed a recipe for one or more patients.";
     public static final String PATIENT_DELETE_ERROR = "This patient can't be deleted because one or more recipes have been registered for him.";
 

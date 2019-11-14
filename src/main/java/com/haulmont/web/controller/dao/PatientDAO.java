@@ -5,6 +5,7 @@ import com.haulmont.web.model.Patient;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class PatientDAO {
@@ -42,8 +43,12 @@ public class PatientDAO {
 
     public List<Patient> findAll() {
         Session session = HibernateSessionFactoryUtil.getSessionFactory().openSession();
-        List<Patient> users = (List<Patient>) session.createQuery("From Patient ").list();
-        session.close();
-        return users;
+        try {
+            List<Patient> users = (List<Patient>) session.createQuery("From Patient ").list();
+            session.close();
+            return users;
+        } catch (PersistenceException e) {
+            return null;
+        }
     }
 }
