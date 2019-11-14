@@ -1,7 +1,7 @@
 package com.haulmont.web.controller.dao;
 
 import com.haulmont.web.controller.HibernateSessionFactoryUtil;
-import com.haulmont.web.model.entity.Recipe;
+import com.haulmont.web.model.Recipe;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 

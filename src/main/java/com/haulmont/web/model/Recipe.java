@@ -1,4 +1,4 @@
-package com.haulmont.web.model.entity;
+package com.haulmont.web.model;
 
 import javax.persistence.*;
 import java.sql.Date;

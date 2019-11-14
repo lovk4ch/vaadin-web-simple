@@ -1,6 +1,6 @@
 package com.haulmont.web.controller.simpleJPA;
 
-import com.haulmont.web.model.entity.Doctor;
+import com.haulmont.web.model.Doctor;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

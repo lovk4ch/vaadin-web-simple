@@ -1,6 +1,6 @@
 package com.haulmont.web.view.recipe.sub;
 
-import com.haulmont.web.model.entity.Recipe;
+import com.haulmont.web.model.Recipe;
 
 import java.sql.Date;
 import java.time.LocalDate;

@@ -11,6 +11,10 @@ import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.*;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+
 /**
  * This UI is the application entry point. A UI may either represent a browser window
  * (or tab) or some part of a html page where a Vaadin application is embedded.
@@ -24,6 +28,8 @@ public class Main extends UI {
     @VaadinServletConfiguration(ui = Main.class, productionMode = false)
     public static class ProjectServlet extends VaadinServlet {
     }
+
+    public static Connection c;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {

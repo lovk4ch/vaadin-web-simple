@@ -1,7 +1,7 @@
 package com.haulmont.web.view.doctor;
 
 import com.haulmont.web.controller.Service;
-import com.haulmont.web.model.entity.Doctor;
+import com.haulmont.web.model.Doctor;
 import com.haulmont.web.view.Consts;
 import com.vaadin.data.Binder;
 import com.vaadin.ui.*;

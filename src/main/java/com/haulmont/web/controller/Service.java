@@ -3,9 +3,9 @@ package com.haulmont.web.controller;
 import com.haulmont.web.controller.dao.DoctorDAO;
 import com.haulmont.web.controller.dao.PatientDAO;
 import com.haulmont.web.controller.dao.RecipeDAO;
-import com.haulmont.web.model.entity.Doctor;
-import com.haulmont.web.model.entity.Patient;
-import com.haulmont.web.model.entity.Recipe;
+import com.haulmont.web.model.Doctor;
+import com.haulmont.web.model.Patient;
+import com.haulmont.web.model.Recipe;
 
 import java.util.List;
 

@@ -1,7 +1,7 @@
 package com.haulmont.web.view.patient;
 
 import com.haulmont.web.controller.Service;
-import com.haulmont.web.model.entity.Patient;
+import com.haulmont.web.model.Patient;
 import com.haulmont.web.view.Consts;
 import com.vaadin.ui.*;
 

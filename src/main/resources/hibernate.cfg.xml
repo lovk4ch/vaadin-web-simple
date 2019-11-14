@@ -4,11 +4,11 @@
     "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
   <session-factory>
-    <property name="connection.url">jdbc:hsqldb:file:/database/src</property>
+    <property name="connection.url">jdbc:hsqldb:file:src/main/resources/database/src/src</property>
     <property name="connection.driver_class">org.hsqldb.jdbc.JDBCDriver</property>
-    <mapping class="com.haulmont.web.model.entity.Doctor"/>
-    <mapping class="com.haulmont.web.model.entity.Patient"/>
-    <mapping class="com.haulmont.web.model.entity.Recipe"/>
+    <mapping class="com.haulmont.web.model.Doctor"/>
+    <mapping class="com.haulmont.web.model.Patient"/>
+    <mapping class="com.haulmont.web.model.Recipe"/>
     <!-- <property name="connection.username"/> -->
     <!-- <property name="connection.password"/> -->
 

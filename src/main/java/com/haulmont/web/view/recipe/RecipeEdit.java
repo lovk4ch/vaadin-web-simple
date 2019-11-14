@@ -1,8 +1,8 @@
 package com.haulmont.web.view.recipe;
 
 import com.haulmont.web.controller.Service;
-import com.haulmont.web.model.entity.Doctor;
-import com.haulmont.web.model.entity.Patient;
+import com.haulmont.web.model.Doctor;
+import com.haulmont.web.model.Patient;
 import com.haulmont.web.view.Consts;
 import com.haulmont.web.view.recipe.sub.RecipeRow;
 import com.vaadin.data.Binder;

@@ -1,17 +1,17 @@
-package com.haulmont.web.model.entity;
+package com.haulmont.web.model;
 
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.Objects;
 
 @Entity
-@Table(name = "PATIENT", schema = "PUBLIC", catalog = "PUBLIC")
-public class Patient {
+@Table(name = "DOCTOR", schema = "PUBLIC", catalog = "PUBLIC")
+public class Doctor {
     private long id;
     private String firstName;
     private String lastName;
     private String middleName;
-    private String phoneNumber;
+    private String specialization;
     private Collection<Recipe> recipesById;
 
     @Id
@@ -57,33 +57,33 @@ public class Patient {
     }
 
     @Basic
-    @Column(name = "PHONE_NUMBER", nullable = true, length = 15)
-    public String getPhoneNumber() {
-        return phoneNumber;
+    @Column(name = "SPECIALIZATION", nullable = false, length = 30)
+    public String getSpecialization() {
+        return specialization;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setSpecialization(String specialization) {
+        this.specialization = specialization;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Patient that = (Patient) o;
+        Doctor that = (Doctor) o;
         return id == that.id &&
                 Objects.equals(firstName, that.firstName) &&
                 Objects.equals(lastName, that.lastName) &&
                 Objects.equals(middleName, that.middleName) &&
-                Objects.equals(phoneNumber, that.phoneNumber);
+                Objects.equals(specialization, that.specialization);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, firstName, lastName, middleName, phoneNumber);
+        return Objects.hash(id, firstName, lastName, middleName, specialization);
     }
 
-    @OneToMany(mappedBy = "patientByPatient")
+    @OneToMany(mappedBy = "doctorByDoctor")
     public Collection<Recipe> getRecipesById() {
         return recipesById;
     }
