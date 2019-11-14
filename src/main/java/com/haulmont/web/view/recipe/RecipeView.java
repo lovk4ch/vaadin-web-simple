@@ -85,7 +85,7 @@ public class RecipeView extends VerticalLayout {
         grid.setItems(service.findAllRecipes().stream()
                 .map(RecipeRow::new)
                 .filter(recipeRow -> recipeRow.getPatient().toLowerCase().contains(patient.toLowerCase()))
-                .filter(recipeRow -> recipeRow.getPriority().contains(priority.toLowerCase()))
+                .filter(recipeRow -> recipeRow.getPriority().toLowerCase().contains(priority.toLowerCase()))
                 .filter(recipeRow -> recipeRow.getDescription().toLowerCase().contains(description.toLowerCase()))
                 .collect(Collectors.toList()));
     }
