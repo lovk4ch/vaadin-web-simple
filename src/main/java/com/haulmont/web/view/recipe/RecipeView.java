@@ -11,8 +11,6 @@ import java.util.stream.Collectors;
 
 public class RecipeView extends VerticalLayout {
 
-    private RecipeEdit recipeEdit = new RecipeEdit(this);
-
     private TextField filterPatient, filterDescription;
     private ComboBox filterPriority;
 
@@ -52,10 +50,14 @@ public class RecipeView extends VerticalLayout {
         addComponents(grid);
 
         addButton = new Button(Consts.ADD,
-                event -> recipeEdit.add(new RecipeRow()));
+                event -> {
+                    RecipeEdit recipeEdit = new RecipeEdit(this);
+                    recipeEdit.add(new RecipeRow());
+                });
 
         updateButton = new Button(Consts.UPDATE,
                 event -> {
+                    RecipeEdit recipeEdit = new RecipeEdit(this);
                     if (grid.asSingleSelect().getValue() != null) {
                         recipeEdit.edit(grid.asSingleSelect().getValue());
                     } else {
