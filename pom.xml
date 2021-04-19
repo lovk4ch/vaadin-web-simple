@@ -15,7 +15,7 @@
 
 	<properties>
 		<hibernate.version>5.4.8.Final</hibernate.version>
-		<vaadin.version>8.0.5</vaadin.version>
+		<vaadin.version>8.12.3</vaadin.version>
 		<vaadin.plugin.version>8.0.5</vaadin.plugin.version>
 		<jetty.plugin.version>9.4.22.v20191022</jetty.plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
